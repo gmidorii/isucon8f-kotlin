@@ -1,4 +1,21 @@
 package com.github.isucon.service
 
-class UserService {
+import com.github.isucon.model.entity.User
+import com.github.isucon.model.repository.UserRepository
+import com.github.isucon.web.SignUpForm
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.transaction.annotation.Transactional
+
+class UserService @Autowired constructor(private val userRepository: UserRepository) {
+
+    @Transactional
+    fun signUp(form: SignUpForm) {
+        val user = User(
+                bankId = form.bank_id,
+                name = form.name,
+                password = form.password
+        )
+
+        userRepository.save(user)
+    }
 }
