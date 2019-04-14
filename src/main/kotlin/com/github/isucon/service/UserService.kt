@@ -3,6 +3,7 @@ package com.github.isucon.service
 import com.github.isucon.model.entity.User
 import com.github.isucon.model.repository.UserRepository
 import com.github.isucon.web.SignUpForm
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -14,7 +15,7 @@ class UserService(private val userRepository: UserRepository) {
         val user = User(
                 bankId = form.bank_id,
                 name = form.name,
-                password = form.password
+                password = BCryptPasswordEncoder().encode(form.password)
         )
 
         userRepository.save(user)
