@@ -3,10 +3,11 @@ package com.github.isucon.service
 import com.github.isucon.model.entity.User
 import com.github.isucon.model.repository.UserRepository
 import com.github.isucon.web.SignUpForm
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
-class UserService @Autowired constructor(private val userRepository: UserRepository) {
+@Service
+class UserService(private val userRepository: UserRepository) {
 
     @Transactional
     fun signUp(form: SignUpForm) {

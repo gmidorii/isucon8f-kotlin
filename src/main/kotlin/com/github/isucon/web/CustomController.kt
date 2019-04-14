@@ -1,7 +1,6 @@
 package com.github.isucon.web
 
 import com.github.isucon.service.UserService
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class CustomController @Autowired constructor(private val userService: UserService) {
+class CustomController(private val userService: UserService) {
 
     @GetMapping("/ping")
     fun ping(): ResponseEntity<String> {
