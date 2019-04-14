@@ -29,6 +29,7 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-devtools")
 	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
     compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.1.4.RELEASE'
+	compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.9.8'
 }
 
 compileKotlin {

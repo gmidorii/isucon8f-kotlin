@@ -1,4 +1,4 @@
-package com.github.isucon.model.entity
+package com.github.isucon.infra.entity
 
 import org.springframework.data.annotation.CreatedDate
 import java.time.LocalDateTime

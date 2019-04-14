@@ -1,7 +1,7 @@
 package com.github.isucon.service
 
-import com.github.isucon.model.entity.User
-import com.github.isucon.model.repository.UserRepository
+import com.github.isucon.infra.entity.User
+import com.github.isucon.infra.repository.UserRepository
 import com.github.isucon.web.SignUpForm
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service

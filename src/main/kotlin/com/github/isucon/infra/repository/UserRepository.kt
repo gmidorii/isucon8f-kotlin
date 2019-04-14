@@ -1,6 +1,6 @@
-package com.github.isucon.model.repository
+package com.github.isucon.infra.repository
 
-import com.github.isucon.model.entity.User
+import com.github.isucon.infra.entity.User
 import org.springframework.data.repository.CrudRepository
 
 interface UserRepository : CrudRepository<User, Long> {
